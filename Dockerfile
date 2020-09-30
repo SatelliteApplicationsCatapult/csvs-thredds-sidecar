@@ -12,6 +12,4 @@ ENV AWS_DEFAULT_REGION eu-west-1
 ENV S3_S3V4 no
 ENV S3_URL http://s3-uk-1.sa-catapult.co.uk
 
-COPY restore_era5_daily_1.sh /restore_era5_daily_1.sh
-COPY restore_era5_daily_2.sh /restore_era5_daily_2.sh
-COPY restore_era5_monthly_30years.sh /restore_era5_monthly_30years.sh
+COPY restore_era5_data.sh /restore_era5_data.sh
