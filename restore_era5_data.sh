@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # daily data part 1
 aws --endpoint-url=$S3_URL s3 sync s3://csvs-netcdf/daily/ /usr/local/daily-1-data/ \
 --exclude ERA5_daily_mean_m* \
