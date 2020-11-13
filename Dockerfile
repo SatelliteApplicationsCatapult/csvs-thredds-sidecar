@@ -13,9 +13,6 @@ ENV CONCURRENT_REQUESTS 1
 
 RUN aws configure set default.s3.max_concurrent_requests ${CONCURRENT_REQUESTS}
 
-COPY restore_era5_data.sh /scripts/
-COPY restore_era5_land_data.sh /scripts/
-COPY restore_trmm_data.sh /scripts/
-COPY restore_ncep_data.sh /scripts/
+COPY scripts/ /scripts/
 
 RUN find /scripts/ -type f -iname "*.sh" -exec chmod +x {} \;
