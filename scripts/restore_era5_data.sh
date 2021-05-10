@@ -21,9 +21,9 @@ aws --endpoint-url=$S3_URL s3 sync s3://csvs-netcdf/daily/ /usr/local/daily-3-da
 --exclude ERA5_daily_mean_SST/* &&
 
 # monthly data
-mkdir /usr/local/monthly-yearly-data/monthly &&
+mkdir -p /usr/local/monthly-yearly-data/monthly &&
 aws --endpoint-url=$S3_URL s3 sync s3://csvs-netcdf/monthly/ /usr/local/monthly-yearly-data/monthly &&
 
 # 30 yeras average data
-mkdir /usr/local/monthly-yearly-data/30year &&
+mkdir -p /usr/local/monthly-yearly-data/30year &&
 aws --endpoint-url=$S3_URL s3 sync s3://csvs-netcdf/30year/ /usr/local/monthly-yearly-data/30year
